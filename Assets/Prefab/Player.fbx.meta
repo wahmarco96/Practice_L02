@@ -1,48 +1,45 @@
 fileFormatVersion: 2
-guid: ed0a45f298fa3734b8b457bfc729b3a2
+guid: b85956256b068dd4e8f8a0ae4e357942
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Body
-    100002: Body_Ctrl
-    100004: L_Hand
-    100006: L_Hand_CTRL
-    100008: L_Leg
-    100010: L_Leg_CTRL
-    100012: //RootNode
-    100014: R_Hand
-    100016: R_Hand_CTRL
-    100018: R_Leg
-    100020: R_Leg_CTRL
+    100002: Head
+    100004: Knife2
+    100006: L_Arm
+    100008: L_Foot
+    100010: L_Leg
+    100012: L_Palm
+    100014: Neck
+    100016: //RootNode
+    100018: R_Arm
+    100020: R_Foot
+    100022: R_Leg
+    100024: R_Palm
+    100026: Torso
+    100028: Waist
     400000: Body
-    400002: Body_Ctrl
-    400004: L_Hand
-    400006: L_Hand_CTRL
-    400008: L_Leg
-    400010: L_Leg_CTRL
-    400012: //RootNode
-    400014: R_Hand
-    400016: R_Hand_CTRL
-    400018: R_Leg
-    400020: R_Leg_CTRL
+    400002: Head
+    400004: Knife2
+    400006: L_Arm
+    400008: L_Foot
+    400010: L_Leg
+    400012: L_Palm
+    400014: Neck
+    400016: //RootNode
+    400018: R_Arm
+    400020: R_Foot
+    400022: R_Leg
+    400024: R_Palm
+    400026: Torso
+    400028: Waist
     2100000: New_Character_0_palette1
-    2300000: Body
-    2300002: L_Hand
-    2300004: L_Leg
-    2300006: R_Hand
-    2300008: R_Leg
-    3300000: Body
-    3300002: L_Hand
-    3300004: L_Leg
-    3300006: R_Hand
-    3300008: R_Leg
+    2100002: Knife_palette1
     4300000: Body
-    4300002: L_Hand
-    4300004: L_Leg
-    4300006: R_Hand
-    4300008: R_Leg
-    7400000: Take 001
+    4300002: Knife2
     9500000: //RootNode
+    13700000: Body
+    13700002: Knife2
   externalObjects: {}
   materials:
     importMaterials: 1
