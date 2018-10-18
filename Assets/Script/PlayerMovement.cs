@@ -39,6 +39,6 @@ public class PlayerMovement : MonoBehaviour, IDragHandler, IEndDragHandler
         Vector3 playerMove = Vector3.zero;
         playerMove.x = dir.x;
         playerMove.z = dir.y;
-        player.Translate(playerMove.x * Time.deltaTime, 0, playerMove.z * Time.deltaTime, Space.World);
+        player.Translate(playerMove.x * Time.deltaTime*10, 0, playerMove.z * Time.deltaTime*10, Space.World);
     }
 }
