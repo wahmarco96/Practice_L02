@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour, IDragHandler, IEndDragHandler
     Vector3 initPos;
     public Vector3 dir;
     public Transform player;
+    
 
     // Use this for initialization
     void Start()
@@ -40,5 +41,7 @@ public class PlayerMovement : MonoBehaviour, IDragHandler, IEndDragHandler
         playerMove.x = dir.x;
         playerMove.z = dir.y;
         player.Translate(playerMove.x * Time.deltaTime*10, 0, playerMove.z * Time.deltaTime*10, Space.World);
+
+        
     }
 }
