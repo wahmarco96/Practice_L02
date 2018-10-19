@@ -11,13 +11,16 @@ public class Enemy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(player.position);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        StartCoroutine(CheckPlayerPos());
 	}
 
-
+    IEnumerator CheckPlayerPos()
+    {
+        agent.SetDestination(player.position);
+        yield return new WaitForSeconds(1);
+    }
 }

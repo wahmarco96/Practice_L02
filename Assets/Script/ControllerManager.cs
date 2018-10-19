@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PlayerMovement : MonoBehaviour, IDragHandler, IEndDragHandler
+public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
 {
 
     Vector3 initPos;
     public Vector3 dir;
     public Transform player;
-    
 
     // Use this for initialization
     void Start()
@@ -40,8 +39,6 @@ public class PlayerMovement : MonoBehaviour, IDragHandler, IEndDragHandler
         Vector3 playerMove = Vector3.zero;
         playerMove.x = dir.x;
         playerMove.z = dir.y;
-        player.Translate(playerMove.x * Time.deltaTime*10, 0, playerMove.z * Time.deltaTime*10, Space.World);
-
-        
+        player.Translate(playerMove.x * Time.deltaTime * 10, 0, playerMove.z * Time.deltaTime * 10, Space.World);
     }
 }

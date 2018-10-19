@@ -52,6 +52,10 @@ public class Player : MonoBehaviour {
             tempDamageFlash.a = 1f;
             damageFlash.color = tempDamageFlash;
         }
+        else
+        {
+            damageFlash.color = Color.clear;
+        }
     }
 
     void TimeToHeal()
