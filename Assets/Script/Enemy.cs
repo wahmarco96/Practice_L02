@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
     public Transform player;
     float damage = 1f;
     float maxHealth = 7f;
-    float currentHealth;
+    public float currentHealth;
 
 	// Use this for initialization
 	void Start () {

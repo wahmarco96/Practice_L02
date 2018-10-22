@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
     public Image damageFlash;
     Color tempDamageFlash;
     float timeToHeal = 5f;
-   public float healTimer = 0f;
+    public float healTimer = 0f;
 
     // Use this for initialization
     void Start () {
