@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
+
+    public delegate void DelDeath();
+    public static event DelDeath OnDeath;
     float maxHealth = 5;
     public float currentHealth;
     float damage = 1f;
@@ -37,10 +40,11 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void IsDeath()
+    public void IsDeath()
     {
-        if (currentHealth == 0f)
+        if (currentHealth < 1f)
         {
+            if (OnDeath != null) OnDeath();
             Destroy(this.gameObject);
         }
     }
