@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
     public GameObject winLosePanel;
     public Text winLoseText;
+    public GameObject settingPanel;
 
 
 	// Use this for initialization
@@ -32,5 +33,22 @@ public class UIManager : MonoBehaviour {
     {
         winLosePanel.SetActive(true);
         winLoseText.text = "Lose";
+    }
+
+    public void OpenSetting()
+    {
+        settingPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void CloseSettingPanel()
+    {
+        settingPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
