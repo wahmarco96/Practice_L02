@@ -1,51 +1,34 @@
 fileFormatVersion: 2
-guid: b85956256b068dd4e8f8a0ae4e357942
+guid: 60e6e286952de6947a4ea8f696a40bff
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Body
-    100002: Head
-    100004: Knife2
-    100006: L_Arm
-    100008: L_Foot
-    100010: L_Leg
-    100012: L_Palm
-    100014: Neck
-    100016: //RootNode
-    100018: R_Arm
-    100020: R_Foot
-    100022: R_Leg
-    100024: R_Palm
-    100026: Torso
-    100028: Waist
-    400000: Body
-    400002: Head
-    400004: Knife2
-    400006: L_Arm
-    400008: L_Foot
-    400010: L_Leg
-    400012: L_Palm
-    400014: Neck
-    400016: //RootNode
-    400018: R_Arm
-    400020: R_Foot
-    400022: R_Leg
-    400024: R_Palm
-    400026: Torso
-    400028: Waist
-    2100000: New_Character_0_palette1
-    2100002: Knife_palette1
-    4300000: Body
-    4300002: Knife2
+    100000: Bottom
+    100002: //RootNode
+    100004: EnemySkin
+    100006: GingerBread
+    100008: GingerBread_Joint
+    100010: Joints
+    100012: Middle
+    100014: Top
+    400000: Bottom
+    400002: //RootNode
+    400004: EnemySkin
+    400006: GingerBread
+    400008: GingerBread_Joint
+    400010: Joints
+    400012: Middle
+    400014: Top
+    2100000: Better_BOI_0_palette1
+    4300000: GingerBread
     9500000: //RootNode
-    13700000: Body
-    13700002: Knife2
+    13700000: GingerBread
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: New_Character_0_palette1
-    second: {fileID: 2100000, guid: 778a1fa16c1eeee49b54ee837c713a4b, type: 2}
+      name: Better_BOI_0_palette1
+    second: {fileID: 2100000, guid: 56f8cd8aa8dca4f438b44219044bce14, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
