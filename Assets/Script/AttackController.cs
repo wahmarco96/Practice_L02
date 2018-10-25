@@ -39,7 +39,7 @@ public class AttackController : MonoBehaviour {
 
     public void HeavyAttack()
     {
-
+         
     }
 
     public void SkillOne()
