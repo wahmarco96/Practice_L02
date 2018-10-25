@@ -9,11 +9,11 @@ public class Player : MonoBehaviour {
     public static event DelDeath OnDeath;
     float maxHealth = 5;
     public float currentHealth;
-    float damage = 1f;
     public Image damageFlash;
     Color tempDamageFlash;
     float timeToHeal = 5f;
     public float healTimer = 0f;
+    
 
     // Use this for initialization
     void Start () {
@@ -22,6 +22,7 @@ public class Player : MonoBehaviour {
         tempDamageFlash = damageFlash.color;
         tempDamageFlash.a = 0f;
         damageFlash.color = tempDamageFlash;
+
     }
 	
 	// Update is called once per frame
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour {
         TimeToHeal();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Enemy")
         {
@@ -68,7 +69,7 @@ public class Player : MonoBehaviour {
         {
             healTimer += 1f;
         }
-        if (healTimer == 300f)
+        if (healTimer >= 300f)
         {
             currentHealth += 1f;
             healTimer = 0f;

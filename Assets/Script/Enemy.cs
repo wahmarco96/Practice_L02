@@ -6,33 +6,37 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour {
     NavMeshAgent agent;
     public Transform player;
-    float damage = 1f;
     float maxHealth = 7f;
     public float currentHealth;
+    public bool playerAlive =true;
 
-	// Use this for initialization
-	void Start () {
+    public float takeDamage;
+    public AttackController attackDamage;
+
+    // Use this for initialization
+    void Start () {
         agent = GetComponent<NavMeshAgent>();
         currentHealth = maxHealth;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
         StartCoroutine(CheckPlayerPos());
         IsDead();
-	}
+        TakeDamage();
+    }
 
     IEnumerator CheckPlayerPos()
     {
-        agent.SetDestination(player.position);
-        yield return new WaitForSeconds(1);
+            agent.SetDestination(player.position);
+            yield return new WaitForSeconds(1);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            currentHealth -= damage;
+            currentHealth -= takeDamage;
         }
     }
 
@@ -44,4 +48,8 @@ public class Enemy : MonoBehaviour {
         }
     }
 
+    void TakeDamage()
+    {
+        takeDamage = attackDamage.playerAttackDamage;
+    }
 }
