@@ -3646,11 +3646,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9164013b557f78841bd11395f99e1c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 614967326}
   currentHealth: 0
   playerAlive: 1
   takeDamage: 0
-  attackDamage: {fileID: 0}
+  attackDamage: {fileID: 1513758042}
 --- !u!195 &1126082654
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4201,7 +4201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9164013b557f78841bd11395f99e1c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 614967326}
   currentHealth: 0
   playerAlive: 1
   takeDamage: 0
@@ -5526,11 +5526,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9164013b557f78841bd11395f99e1c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 614967326}
   currentHealth: 0
   playerAlive: 1
   takeDamage: 0
-  attackDamage: {fileID: 0}
+  attackDamage: {fileID: 1513758042}
 --- !u!195 &1580568502
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7760,11 +7760,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9164013b557f78841bd11395f99e1c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 614967326}
   currentHealth: 0
   playerAlive: 1
   takeDamage: 0
-  attackDamage: {fileID: 0}
+  attackDamage: {fileID: 1513758042}
 --- !u!195 &2039162227
 NavMeshAgent:
   m_ObjectHideFlags: 0

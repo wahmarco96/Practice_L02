@@ -48,6 +48,7 @@ public class AttackController : MonoBehaviour {
         {
             playerAttackDamage = 2;
             Debug.Log("Skill1Activated");
+            Invoke("DeactivatedSkillOne", 4f);
             skillCDLeft = skillCD;
         }
 
@@ -109,5 +110,19 @@ public class AttackController : MonoBehaviour {
         else skill3IsReady = false;
     }
 
+    void DeactivatedSkillOne()
+    {
+        playerAttackDamage = 1f;
+        Debug.Log("skill is finished");
+    }
 
+    void DeactivatedSkillTwo()
+    {
+
+    }
+
+    void DeactivatedSkillThree()
+    {
+
+    }
 }
