@@ -7,11 +7,11 @@ public class Player : MonoBehaviour {
 
     public delegate void DelDeath();
     public static event DelDeath OnDeath;
-    float maxHealth = 5;
+    float maxHealth = 10;
     public float currentHealth;
     public Image damageFlash;
     Color tempDamageFlash;
-    float timeToHeal = 5f;
+    float timeToHeal = 10f;
     public float healTimer = 0f;
     
 

@@ -46,7 +46,7 @@ public class AttackController : MonoBehaviour {
     {
         if (skillIsReady == true)
         {
-            playerAttackDamage = 2;
+            playerAttackDamage = 5;
             Debug.Log("Skill1Activated");
             Invoke("DeactivatedSkillOne", 4f);
             skillCDLeft = skillCD;

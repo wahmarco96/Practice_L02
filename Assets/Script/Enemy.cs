@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour {
 
     NavMeshAgent agent;
     public Transform player;
-    float maxHealth = 7f;
+    float maxHealth = 5f;
     public float currentHealth;
     public bool playerAlive =true;
     public Image currentHealthBar;
