@@ -18,14 +18,13 @@ public class AttackController : MonoBehaviour {
     float skillCD3Left;
     bool skill3IsReady;
 
-     /*bool skill1IsActivated  for player script (needed to manipulate player hp)(and enemy hp)
-       void skillOneDamage()
+    public float playerAttackDamage = 1f;
 
-      */
+     /*bool skill1IsActivated  for player script (needed to manipulate player hp)(and enemy hp)
+       void skillOneDamage() */
 
     // Use this for initialization
     void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -40,16 +39,17 @@ public class AttackController : MonoBehaviour {
 
     public void HeavyAttack()
     {
-
+         
     }
 
     public void SkillOne()
     {
         if (skillIsReady == true)
         {
+            playerAttackDamage = 2;
             Debug.Log("Skill1Activated");
+            Invoke("DeactivatedSkillOne", 4f);
             skillCDLeft = skillCD;
-
         }
 
         else Debug.Log("Skill is not available yet");
@@ -110,5 +110,19 @@ public class AttackController : MonoBehaviour {
         else skill3IsReady = false;
     }
 
+    void DeactivatedSkillOne()
+    {
+        playerAttackDamage = 1f;
+        Debug.Log("skill is finished");
+    }
 
+    void DeactivatedSkillTwo()
+    {
+
+    }
+
+    void DeactivatedSkillThree()
+    {
+
+    }
 }
