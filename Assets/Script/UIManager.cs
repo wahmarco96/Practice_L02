@@ -2,16 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class UIManager : MonoBehaviour {
+    
+    [Header("In Game Setting")]
     public GameObject winLosePanel;
     public Text winLoseText;
     public GameObject settingPanel;
 
+    [Header("Menu Setting")]
+    public GameObject menuSettingPanel;
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -47,6 +53,16 @@ public class UIManager : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
+    public void OpenMenuSetting()
+    {
+        menuSettingPanel.SetActive(true);
+    }
+
+    public void CloseMenuSettingPanel()
+    {
+        menuSettingPanel.SetActive(false);
+    }
+
     public void QuitGame()
     {
         Application.Quit();
@@ -59,6 +75,11 @@ public class UIManager : MonoBehaviour {
 
     public void MainMenu()
     {
+        SceneManager.LoadScene(0);
+    }
 
+    public void NewGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }
