@@ -1,34 +1,17 @@
 fileFormatVersion: 2
-guid: 4a1a23cf897e86b47ad8f9c02eb50f2d
+guid: a0ab941a91edd0b4ca5f5a237caebb58
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Bottom
-    100002: Bread
-    100004: Bread_Joint
-    100006: //RootNode
-    100008: EnemySkin
-    100010: Joints
-    100012: Middle
-    100014: Top
-    400000: Bottom
-    400002: Bread
-    400004: Bread_Joint
-    400006: //RootNode
-    400008: EnemySkin
-    400010: Joints
-    400012: Middle
-    400014: Top
+    100000: Bread
+    100002: //RootNode
+    400000: Bread
+    400002: //RootNode
     2100000: Better_BOI_2_palette1
+    2300000: Bread
+    3300000: Bread
     4300000: Bread
-    9500000: //RootNode
-    13700000: Bread
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Better_BOI_2_palette1
-    second: {fileID: 2100000, guid: 1f35a63d757194b4f8a3b629c741c269, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -103,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

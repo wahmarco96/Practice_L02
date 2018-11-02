@@ -1,34 +1,17 @@
 fileFormatVersion: 2
-guid: 60e6e286952de6947a4ea8f696a40bff
+guid: d6e12eb13cd86b042ba05996a46a5d9e
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Bottom
+    100000: Donut
     100002: //RootNode
-    100004: EnemySkin
-    100006: GingerBread
-    100008: GingerBread_Joint
-    100010: Joints
-    100012: Middle
-    100014: Top
-    400000: Bottom
+    400000: Donut
     400002: //RootNode
-    400004: EnemySkin
-    400006: GingerBread
-    400008: GingerBread_Joint
-    400010: Joints
-    400012: Middle
-    400014: Top
-    2100000: Better_BOI_0_palette1
-    4300000: GingerBread
-    9500000: //RootNode
-    13700000: GingerBread
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Better_BOI_0_palette1
-    second: {fileID: 2100000, guid: 56f8cd8aa8dca4f438b44219044bce14, type: 2}
+    2100000: Better_BOI_1_palette1
+    2300000: Donut
+    3300000: Donut
+    4300000: Donut
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -103,7 +86,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

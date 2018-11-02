@@ -9,7 +9,7 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     Vector3 initPos;
     public Vector3 dir;
     public Transform player;
-
+    public Vector3 playerMove = Vector3.zero;
     // Use this for initialization
     void Start()
     {
