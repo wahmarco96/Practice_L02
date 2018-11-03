@@ -8,19 +8,17 @@ public class Enemy : MonoBehaviour
 {
 
     NavMeshAgent agent;
-    public Transform player;
+    private Player player;
     float maxHealth = 5f;
     public float currentHealth;
-    public bool playerAlive = true;
     public Image currentHealthBar;
     public bool playerInRange;
-    public float takeDamage;
-    public AttackController attackDamage;
     Vector3 originPos;
 
     // Use this for initialization
     void Start()
     {
+        this.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         agent = GetComponent<NavMeshAgent>();
         currentHealth = maxHealth;
         originPos = this.transform.position;
@@ -30,9 +28,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         StartCoroutine(CheckPlayerPos());
-        IsDead();
-        TakeDamage();
-        CheckCurrentHealth();
         NoticePlayerInRange();
     }
 
@@ -40,7 +35,7 @@ public class Enemy : MonoBehaviour
     {
         if (playerInRange == true)
         {
-            agent.SetDestination(player.position);
+            agent.SetDestination(player.transform.position);
             yield return new WaitForSeconds(1);
         }
 
@@ -52,7 +47,7 @@ public class Enemy : MonoBehaviour
 
     void NoticePlayerInRange()
     {
-        if (Vector3.Distance(player.position, this.transform.position) < 60f)
+        if (Vector3.Distance(player.transform.position, this.transform.position) < 60f)
         {
             playerInRange = true;
         }
@@ -62,18 +57,13 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void TakeDamage()
+    public void TakeDamage( int damage )
     {
-        takeDamage = attackDamage.playerAttackDamage;
+        currentHealth -= damage;
+        CheckCurrentHealth();
+        IsDead();
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            currentHealth -= takeDamage;
-        }
-    }
+    
 
     void CheckCurrentHealth()
     {

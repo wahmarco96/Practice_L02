@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AttackController : MonoBehaviour {
+public class AttackController : MonoBehaviour { // this script controll the player script (then use player script to control others)
     public Animator anim;
     public Image cdMask1;
     public Image cdMask2;
@@ -17,24 +17,27 @@ public class AttackController : MonoBehaviour {
     float skillCD3 = 15f;
     float skillCD3Left;
     bool skill3IsReady;
+    
+    public Player playerData;
 
-    public float playerAttackDamage = 1f;
 
      /*bool skill1IsActivated  for player script (needed to manipulate player hp)(and enemy hp)
        void skillOneDamage() */
 
     // Use this for initialization
     void Start () {
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
         SkillCoolDown();
-	}
+    }
 
     public void NormalAttack()
     {
-        anim.Play("Slash");
+        // activate 
+        playerData.UseAttack();
     }
 
     public void HeavyAttack()
@@ -46,7 +49,7 @@ public class AttackController : MonoBehaviour {
     {
         if (skillIsReady == true)
         {
-            playerAttackDamage = 5;
+            playerData.MiyabiOffering(5);
             Debug.Log("Skill1Activated");
             Invoke("DeactivatedSkillOne", 4f);
             skillCDLeft = skillCD;
@@ -54,6 +57,13 @@ public class AttackController : MonoBehaviour {
 
         else Debug.Log("Skill is not available yet");
     }
+
+    void DeactivatedSkillOne()
+    {
+        playerData.MiyabiOffering(1);
+        Debug.Log("skill is finished");
+    }
+
 
     public void SkillTwo()
     {
@@ -110,12 +120,7 @@ public class AttackController : MonoBehaviour {
         else skill3IsReady = false;
     }
 
-    void DeactivatedSkillOne()
-    {
-        playerAttackDamage = 1f;
-        Debug.Log("skill is finished");
-    }
-
+    
     void DeactivatedSkillTwo()
     {
 

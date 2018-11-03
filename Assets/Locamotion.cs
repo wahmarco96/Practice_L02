@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Locamotion : StateMachineBehaviour {
 
-    public float smoothness = 1f;
+    
     public ControllerManager cm;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -14,8 +14,7 @@ public class Locamotion : StateMachineBehaviour {
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        animator.SetFloat("forward", cm.playerMove.y,smoothness,Time.deltaTime);
-        animator.SetFloat("left", cm.playerMove.x, smoothness, Time.deltaTime);
+        
     }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
