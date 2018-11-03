@@ -11,11 +11,12 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     public Transform player;
     public Vector3 playerMove = Vector3.zero;
     public float smoothness = 1f;
-    public Animator animator;
+    Animator animator;
 
     // Use this for initialization
     void Start()
     {
+        animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         initPos = this.transform.position;
     }
 
