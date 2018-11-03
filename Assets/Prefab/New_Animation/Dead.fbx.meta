@@ -1,52 +1,48 @@
 fileFormatVersion: 2
-guid: e11de91bcf37aa44db4fa794941bc4e3
+guid: 83342d89d1b7b0f419f4c9585e595699
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Body
-    100002: CTRL
-    100004: Full_Body_Ctrl
-    100006: Head
-    100008: Knife2
-    100010: L_Arm
-    100012: L_Foot
-    100014: L_Leg
-    100016: L_Palm
-    100018: Left_Hand
-    100020: Left_Leg
-    100022: Neck
-    100024: R_Arm
-    100026: R_Foot
-    100028: R_Leg
-    100030: R_Palm
-    100032: Right_Hand
-    100034: Right_Leg
-    100036: Torso
-    100038: Torso 1
-    100040: Waist
-    100042: //RootNode
+    100002: //RootNode
+    100004: Head
+    100006: Knife2
+    100008: L_Arm
+    100010: L_Foot
+    100012: L_Leg
+    100014: L_Palm
+    100016: Left_Hand
+    100018: Left_Leg
+    100020: Neck
+    100022: R_Arm
+    100024: R_Foot
+    100026: R_Leg
+    100028: R_Palm
+    100030: Right_Hand
+    100032: Right_Leg
+    100034: Torso
+    100036: Torso 1
+    100038: Waist
     400000: Body
-    400002: CTRL
-    400004: Full_Body_Ctrl
-    400006: Head
-    400008: Knife2
-    400010: L_Arm
-    400012: L_Foot
-    400014: L_Leg
-    400016: L_Palm
-    400018: Left_Hand
-    400020: Left_Leg
-    400022: Neck
-    400024: R_Arm
-    400026: R_Foot
-    400028: R_Leg
-    400030: R_Palm
-    400032: Right_Hand
-    400034: Right_Leg
-    400036: Torso
-    400038: Torso 1
-    400040: Waist
-    400042: //RootNode
+    400002: //RootNode
+    400004: Head
+    400006: Knife2
+    400008: L_Arm
+    400010: L_Foot
+    400012: L_Leg
+    400014: L_Palm
+    400016: Left_Hand
+    400018: Left_Leg
+    400020: Neck
+    400022: R_Arm
+    400024: R_Foot
+    400026: R_Leg
+    400028: R_Palm
+    400030: Right_Hand
+    400032: Right_Leg
+    400034: Torso
+    400036: Torso 1
+    400038: Waist
     2100000: New_Character_0_palette1
     2100002: Knife_palette1
     2300000: Knife2
@@ -57,7 +53,7 @@ ModelImporter:
     4300006: Right_Hand
     4300008: Right_Leg
     4300010: Knife2
-    7400000: WalkLeft
+    7400000: Take 001
     9500000: //RootNode
     13700000: Left_Hand
     13700002: Left_Leg
@@ -91,35 +87,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: WalkLeft
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 18
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
         StartCoroutine(CheckPlayerPos());
         NoticePlayerInRange();
     }
-
+    
     IEnumerator CheckPlayerPos()
     {
         if (playerInRange == true)
