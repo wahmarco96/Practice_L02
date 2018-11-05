@@ -10,9 +10,13 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     public Vector3 dir;
     public Transform player;
     public Vector3 playerMove = Vector3.zero;
+    public float smoothness = 1f;
+    Animator animator;
+
     // Use this for initialization
     void Start()
     {
+        animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         initPos = this.transform.position;
     }
 
@@ -32,6 +36,8 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     void Update()
     {
         Move();
+        animator.SetFloat("Forward", dir.y, smoothness, Time.deltaTime);
+        animator.SetFloat("Left", dir.x, smoothness, Time.deltaTime);
     }
 
     void Move()
