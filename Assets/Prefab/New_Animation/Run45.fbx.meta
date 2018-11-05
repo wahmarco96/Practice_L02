@@ -57,7 +57,7 @@ ModelImporter:
     4300006: Right_Hand
     4300008: Right_Leg
     4300010: Knife2
-    7400000: Run 45
+    7400000: RunLeft45
     9500000: //RootNode
     13700000: Left_Hand
     13700002: Left_Leg
@@ -93,7 +93,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Run 45
+      name: RunLeft45
       takeName: Take 001
       firstFrame: 1
       lastFrame: 18

@@ -10,7 +10,7 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     public Vector3 dir;
     public Transform player;
     public Vector3 playerMove = Vector3.zero;
-    public float smoothness = 1f;
+    public float smoothness = 0.1f;
     Animator animator;
 
     // Use this for initialization
