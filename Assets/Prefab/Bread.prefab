@@ -81,7 +81,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1962857908485248
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,8 +194,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.1138716, y: 7.655584, z: 4.4936533}
-  m_Center: {x: 0.09374142, y: 3.8597534, z: -0.0903244}
+  m_Size: {x: 3.7740734, y: 3.8601375, z: 2.215285}
+  m_Center: {x: 0.09374142, y: 1.9620302, z: -0.0903244}
 --- !u!114 &114272593966301082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -310,7 +310,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

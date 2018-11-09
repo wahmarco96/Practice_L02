@@ -17,6 +17,8 @@ public class Player : MonoBehaviour {
     public Attack playerAttack;
     Animator anim;
 
+    
+
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
@@ -61,6 +63,7 @@ public class Player : MonoBehaviour {
         {
             if (OnDeath != null) OnDeath();
             Destroy(this.gameObject);
+        
         }
     }
 

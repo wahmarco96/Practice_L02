@@ -15,6 +15,9 @@ public class Enemy : MonoBehaviour
     public bool playerInRange;
     Vector3 originPos;
 
+    public SpawnPoint spawnCounting;
+    public float enemyDeathCount;
+
     // Use this for initialization
     void Start()
     {
@@ -22,6 +25,8 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         currentHealth = maxHealth;
         originPos = this.transform.position;
+
+        enemyDeathCount = 0f;
     }
 
     // Update is called once per frame
@@ -75,6 +80,8 @@ public class Enemy : MonoBehaviour
         if (currentHealth < 1f)
         {
             Destroy(this.gameObject);
+            enemyDeathCount += 1;
+            spawnCounting.CountingEnemyDeath(enemyDeathCount);
         }
     }
 }
