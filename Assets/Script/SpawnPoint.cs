@@ -27,9 +27,9 @@ public class SpawnPoint : MonoBehaviour {
         }
     }
 
-    public void CountingEnemyDeath(float deathCount)
+    public void CountingEnemyDeath(float enemyDeathCount)
     {
-        enemyDeath = deathCount;
+        enemyDeath = enemyDeathCount;
     }
 
     void SpawnBossCondition()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Knife
+  - Recipe
   layers:
   - Default
   - TransparentFX

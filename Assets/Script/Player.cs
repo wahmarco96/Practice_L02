@@ -17,7 +17,11 @@ public class Player : MonoBehaviour {
     public Attack playerAttack;
     Animator anim;
 
-    
+    // public delegate void Recipe();
+    // public static event Recipe RecipeFound;
+    public bool recipeFound = false;
+    public GameObject recipe;
+    public GameManager gm;
 
     // Use this for initialization
     void Start () {
@@ -55,7 +59,16 @@ public class Player : MonoBehaviour {
             currentHealth -= 1f;
             print("hp");
         }
+
+        if(collision.gameObject.tag == "Recipe")
+        {
+            recipeFound = true;
+            gm.recIsFound = recipeFound;
+            recipeFound = false;
+        }
     }
+
+   
 
     public void IsDeath()
     {
@@ -63,7 +76,6 @@ public class Player : MonoBehaviour {
         {
             if (OnDeath != null) OnDeath();
             Destroy(this.gameObject);
-        
         }
     }
 
