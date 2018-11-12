@@ -43,7 +43,7 @@ public class Player : MonoBehaviour {
     {
         // transfering my player data to others script
         // play animation as well
-        anim.Play("Slash");
+        anim.Play("ComboA");
         playerAttack.InitAttack(damage);
     }
 
