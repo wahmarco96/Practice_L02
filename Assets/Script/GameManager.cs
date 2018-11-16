@@ -30,41 +30,12 @@ public class GameManager : MonoBehaviour {
         breadSetOne.SetActive(false);
         breadSetTwo.SetActive(false);
         breadSetThree.SetActive(false);
-        
     }
 	
 	// Update is called once per frame
 	void Update () {
         ShowWinBreadOne();
 	}
-
-    
-
-  /*void ShowWinBreadOne()
-    {
-        if (recIsFound == true)
-        { 
-            if(firstSetFound == false)
-            {
-                breadSetOne.SetActive(true);
-                recIsFound = false;
-                firstSetFound = true;
-            }
-       
-            if(firstSetFound == true)
-            {
-                breadSetTwo.SetActive(true);
-                recIsFound = false;
-                secondSetFound = true;
-            }
-
-            if (secondSetFound == true) 
-            {
-             breadSetThree.SetActive(true);
-            }
-        }
-    }*/
-
 
     void ShowWinBreadOne()
     {
@@ -77,9 +48,9 @@ public class GameManager : MonoBehaviour {
 
         if (recIsFound == true && secondSetFound == true)
         {
+
             breadSetThree.SetActive(true);
             recIsFound = false;
-            secondSetFound = true;
         }
 
         if (recIsFound == true && firstSetFound == true)
@@ -88,18 +59,5 @@ public class GameManager : MonoBehaviour {
             recIsFound = false;
             secondSetFound = true;
         }
-        
     }
-
-
-    /* private void OnEnable()
-       {
-           if()
-           Player.RecipeFound += ShowWinBreadOne;
-       }
-
-       private void OnDisable()
-       {
-           Player.RecipeFound -= ShowWinBreadOne;
-       }*/
 }

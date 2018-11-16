@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 195788756437296374}
   m_Layer: 0
   m_Name: GingerBread
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -274,6 +274,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114310522956848770}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114664906900609968
 MonoBehaviour:
   m_ObjectHideFlags: 1

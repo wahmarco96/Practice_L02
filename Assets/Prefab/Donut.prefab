@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 195467194266757686}
   m_Layer: 0
   m_Name: Donut
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,6 +210,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114546529006316128}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114244521594634518
 MonoBehaviour:
   m_ObjectHideFlags: 1

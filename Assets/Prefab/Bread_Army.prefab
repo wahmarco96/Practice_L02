@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 4534826018039092}
   m_Layer: 0
   m_Name: Bread_Army
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1988,6 +1988,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114015242143304936}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114054716284854352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2002,6 +2004,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114616931162331210}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114079035481486922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2150,6 +2154,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114760408299300374}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114252223669207714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2255,6 +2261,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114649976415816324}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114289938912087136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2290,6 +2298,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114079035481486922}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114326829817353282
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2497,6 +2507,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114271372693611060}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114616931162331210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2779,6 +2791,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114767997663410960}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114805434763091538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2830,6 +2844,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114252223669207714}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114855099344357260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2865,6 +2881,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114018508823436176}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114904437423830770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2895,6 +2913,8 @@ MonoBehaviour:
   currentHealth: 0
   currentHealthBar: {fileID: 114106462419425826}
   playerInRange: 0
+  spawnCounting: {fileID: 0}
+  enemyDeathCount: 0
 --- !u!114 &114926440944891614
 MonoBehaviour:
   m_ObjectHideFlags: 1
