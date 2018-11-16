@@ -1975,7 +1975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a1ab2917e44824f98d4bb6cc7a9557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 614967326}
 --- !u!1 &364355596
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,11 +4138,6 @@ MeshFilter:
 --- !u!1 &989396411 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100016, guid: b85956256b068dd4e8f8a0ae4e357942, type: 3}
-  m_PrefabInternal: {fileID: 1155296846}
---- !u!95 &989396412 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 9500000, guid: b85956256b068dd4e8f8a0ae4e357942,
-    type: 3}
   m_PrefabInternal: {fileID: 1155296846}
 --- !u!114 &989396413
 MonoBehaviour:
@@ -6585,7 +6579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006bcbd41e0f9e048a30d5ce509273ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 989396412}
   cdMask1: {fileID: 1943319304}
   cdMask2: {fileID: 1081782933}
   cdMask3: {fileID: 580867380}

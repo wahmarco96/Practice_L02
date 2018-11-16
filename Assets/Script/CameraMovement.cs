@@ -6,11 +6,12 @@ public class CameraMovement : MonoBehaviour {
 
     Vector3 playerPos;
     Vector3 getOffset;
-    public Transform player;
+    Transform player;
 
 	// Use this for initialization
 	void Start () {
         GetOffset();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();   
 	}
 	
 	// Update is called once per frame

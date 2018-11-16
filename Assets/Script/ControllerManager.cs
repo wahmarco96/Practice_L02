@@ -36,8 +36,7 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     void Update()
     {
         Move();
-        animator.SetFloat("Forward", dir.y, smoothness, Time.deltaTime);
-        animator.SetFloat("Left", dir.x, smoothness, Time.deltaTime);
+        
     }
 
     void Move()
@@ -46,5 +45,7 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         playerMove.x = dir.x;
         playerMove.z = dir.y;
         player.Translate(playerMove.x * Time.deltaTime * 25, 0, playerMove.z * Time.deltaTime * 25, Space.World);
+        animator.SetFloat("Forward", playerMove.z, smoothness, Time.deltaTime);
+        animator.SetFloat("Left", playerMove.x, smoothness, Time.deltaTime);
     }
 }
