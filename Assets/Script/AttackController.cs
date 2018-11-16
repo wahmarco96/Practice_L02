@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class AttackController : MonoBehaviour { // this script controll the player script (then use player script to control others)
-    public Animator anim;
+    
     public Image cdMask1;
     public Image cdMask2;
     public Image cdMask3;
