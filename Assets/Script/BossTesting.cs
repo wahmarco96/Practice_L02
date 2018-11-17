@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss : MonoBehaviour {
+public class BossTesting : EnemyTesting {
     public GameObject rec;
     GameObject recCopies;
     bool bossDeath = false;
 
+
 	// Use this for initialization
 	void Start () {
+        maxHealth = 10f;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public virtual void Update () {
         Drops();
+        base.Update();
 	}
 
     void Death()

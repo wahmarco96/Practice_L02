@@ -34,6 +34,7 @@ public class EnemyTesting : MonoBehaviour
     {
         StartCoroutine(CheckPlayerPos());
         NoticePlayerInRange();
+
     }
     
     IEnumerator CheckPlayerPos()

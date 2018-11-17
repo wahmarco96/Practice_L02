@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour {
     public int damage;
+    public Enemy enemy;
 
 
     public void InitAttack(int power)
@@ -13,4 +14,8 @@ public class Attack : MonoBehaviour {
         this.gameObject.SetActive(true);
     }
 
+    public void EnemyReceiveDamage()
+    {
+        enemy.TakeDamage(damage);
+    }
 }
