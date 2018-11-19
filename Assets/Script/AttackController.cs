@@ -10,7 +10,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
     public Image cdMask3;
     float skillCD = 5f;
     float skillCDLeft;
-    bool skillIsReady;
+    public bool skillIsReady;
     float skillCD2 = 10f;
     float skillCD2Left;
     bool skill2IsReady;
@@ -42,7 +42,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
 
     public void HeavyAttack()
     {
-         
+        playerData.UseHeavyAttack();
     }
 
     public void SkillOne()
@@ -53,6 +53,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
             Debug.Log("Skill1Activated");
             Invoke("DeactivatedSkillOne", 4f);
             skillCDLeft = skillCD;
+            playerData.anim.Play("Skill01");
         }
 
         else Debug.Log("Skill is not available yet");
@@ -69,6 +70,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
     {
         if(skill2IsReady == true)
         {
+            playerData.anim.Play("Skill02");
             Debug.Log("skill2");
             skillCD2Left = skillCD2;
         }
@@ -80,6 +82,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
     {
         if (skill3IsReady == true)
         {
+            playerData.anim.Play("Ultimate");
             Debug.Log("skill3");
             skillCD3Left = skillCD3;
         }

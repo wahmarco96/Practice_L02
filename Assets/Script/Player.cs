@@ -10,13 +10,15 @@ public class Player : MonoBehaviour {
     float maxHealth = 10;
     public float currentHealth;
     public int damage = 1;
+    public int heavyDamage = 3;
     public Image damageFlash;
     Color tempDamageFlash;
     float timeToHeal = 10f;
     public float healTimer = 0f;
     public Attack playerAttack;
-    Animator anim;
+    public Animator anim;
 
+    public AttackController attaCon;
     // public delegate void Recipe();
     // public static event Recipe RecipeFound;
     public bool recipeFound = false;
@@ -39,7 +41,7 @@ public class Player : MonoBehaviour {
         TimeToHeal();
     }
 
-   public void UseAttack()
+    public void UseAttack()
     {
         // transfering my player data to others script
         // play animation as well
@@ -47,11 +49,30 @@ public class Player : MonoBehaviour {
         playerAttack.InitAttack(damage);
     }
 
+    public void UseHeavyAttack()
+    {
+        anim.Play("Heavy");
+        playerAttack.InitAttack(heavyDamage);
+    }
+
     public void MiyabiOffering(int skillsDamage)
     {
         damage = skillsDamage;
+        //anim.Play("Skill01");
+    }
+    /*
+    public void JamSlam(int slamDamage)
+    {
+        damage = slamDamage;
+        anim.Play("Skill02");
     }
 
+    public void UltimateBro(int UltiDamage)
+    {
+        damage = UltiDamage;
+        anim.Play("Ultimate");
+    }
+    */
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Enemy")

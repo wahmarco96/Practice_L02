@@ -54,7 +54,7 @@ ModelImporter:
     4300004: Left_Leg
     4300006: Right_Hand
     4300008: Right_Leg
-    7400000: Offer
+    7400000: Skill01
     9500000: //RootNode
     13700000: Left_Hand
     13700002: Left_Leg
@@ -90,9 +90,9 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Offer
+      name: Skill01
       takeName: Take 001
-      firstFrame: 1
+      firstFrame: 5
       lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9ce3481be339da749afba65768dc95e5
+guid: a816e195c49a548419d6fac58f980e64
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -23,8 +23,8 @@ ModelImporter:
     100034: Root
     100036: Torso
     100038: Torso 1
-    100040: Waist
-    100042: //RootNode
+    100040: //RootNode
+    100042: Waist
     400000: Body
     400002: CTRL
     400004: Full_Body_Ctrl
@@ -45,8 +45,8 @@ ModelImporter:
     400034: Root
     400036: Torso
     400038: Torso 1
-    400040: Waist
-    400042: //RootNode
+    400040: //RootNode
+    400042: Waist
     2100000: New_Character_0_palette1
     2100002: Knife_palette1
     4300000: Torso
@@ -54,7 +54,7 @@ ModelImporter:
     4300004: Left_Leg
     4300006: Right_Hand
     4300008: Right_Leg
-    7400000: ComboB
+    7400000: Ultimate
     9500000: //RootNode
     13700000: Left_Hand
     13700002: Left_Leg
@@ -90,10 +90,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: ComboB
+      name: Ultimate
       takeName: Take 001
-      firstFrame: 21
-      lastFrame: 41
+      firstFrame: 1
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

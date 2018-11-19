@@ -50,7 +50,7 @@ ModelImporter:
     2100000: New_Character_0_palette1
     2100002: Knife_palette1
     4300000: Right_Hand
-    7400000: Slam
+    7400000: Skill02
     9500000: //RootNode
     13700000: Right_Hand
   externalObjects: {}
@@ -82,7 +82,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Slam
+      name: Skill02
       takeName: Take 001
       firstFrame: 1
       lastFrame: 25

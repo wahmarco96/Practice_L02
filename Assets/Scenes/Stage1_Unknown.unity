@@ -2036,7 +2036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38a1ab2917e44824f98d4bb6cc7a9557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 319795449}
 --- !u!1 &364355596
 GameObject:
   m_ObjectHideFlags: 0
@@ -6331,11 +6330,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006bcbd41e0f9e048a30d5ce509273ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   cdMask1: {fileID: 1943319304}
   cdMask2: {fileID: 1081782933}
   cdMask3: {fileID: 580867380}
-  playerData: {fileID: 0}
+  skillIsReady: 0
+  playerData: {fileID: 1724025989}
 --- !u!1 &1550524268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7994,6 +7993,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1714383301}
+--- !u!114 &1724025989 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114836838002132348, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 18526238}
+  m_Script: {fileID: 11500000, guid: 72df68d546ff8524aa4c524e928113c8, type: 3}
 --- !u!1 &1727221104
 GameObject:
   m_ObjectHideFlags: 0
