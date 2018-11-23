@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
 {
-
     Vector3 initPos;
     public Vector3 dir;
     public Transform player;
@@ -36,7 +35,6 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     void Update()
     {
         Move();
-        
     }
 
     void Move()

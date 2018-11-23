@@ -15,7 +15,6 @@ public class BossTesting : EnemyTesting {
 	
 	// Update is called once per frame
 	public virtual void Update () {
-        Drops();
         base.Update();
 	}
 
@@ -23,6 +22,7 @@ public class BossTesting : EnemyTesting {
     {
         Destroy(this.gameObject);
         bossDeath = true;
+        Drops();
     }
 
     void Drops()

@@ -27,12 +27,14 @@ public class Player : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        gm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
         anim = GetComponent<Animator>();
         currentHealth = maxHealth;
         damageFlash = damageFlash.GetComponent<Image>();
         tempDamageFlash = damageFlash.color;
         tempDamageFlash.a = 0f;
         damageFlash.color = tempDamageFlash;
+        
     }
 	
 	// Update is called once per frame
@@ -116,7 +118,7 @@ public class Player : MonoBehaviour {
 
     void TimeToHeal()
     {
-        if (currentHealth < 5f)
+        if (currentHealth < 10f)
         {
             healTimer += 1f;
         }

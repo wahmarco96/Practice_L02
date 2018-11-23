@@ -11,7 +11,11 @@ public class UIManager : MonoBehaviour {
     public GameObject winLosePanel;
     public Text winLoseText;
     public GameObject settingPanel;
-
+    
+    int index;
+    public Image black;
+    public Animator anim;
+    
     [Header("Menu Setting")]
     public GameObject menuSettingPanel;
 
@@ -70,16 +74,28 @@ public class UIManager : MonoBehaviour {
 
     public void Restart()
     {
-
+        Time.timeScale = 1f;
+        index = 2;
+        StartCoroutine(FadingScene());
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(0);
+        Time.timeScale = 1f; //timescale will affect the fading animation
+        index = 0;
+        StartCoroutine(FadingScene());
     }
 
     public void NewGame()
     {
-        SceneManager.LoadScene(1);
+        index = 1;
+        StartCoroutine(FadingScene());
     }
+
+    IEnumerator FadingScene()
+    {
+        anim.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a == 1);
+        SceneManager.LoadScene(index);
+    }    
 }
