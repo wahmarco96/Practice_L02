@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
 
+    public static CameraMovement Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else if (Instance != this) Destroy(gameObject);
+    }
+
     Vector3 playerPos;
     Vector3 getOffset;
     Transform player;
@@ -20,7 +28,7 @@ public class CameraMovement : MonoBehaviour {
 	void Update () {
         GetPlayerCurrentPos();
         CamFollow();
-        CheckDirection();
+        
     }
 
     void GetOffset()
@@ -35,13 +43,12 @@ public class CameraMovement : MonoBehaviour {
 
     void CamFollow()
     {
-
         this.transform.position = Vector3.MoveTowards(this.transform.position, playerPos, Time.deltaTime * 100);
     }
 
-    void CheckDirection()
-    {
-        Vector3 fwd = raycastObject.transform.TransformDirection(Vector3.forward);
-        Debug.DrawRay(raycastObject.transform.position, fwd * 50, Color.red);
-    }
+
+    public void ChangeDirection( ) {
+
+    } 
+   
 }
