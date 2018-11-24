@@ -55,6 +55,7 @@ public class Player : MonoBehaviour {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA"))
         {
             anim.SetTrigger("ContinueCombo");
+            
         }
         else
         {
@@ -133,4 +134,13 @@ public class Player : MonoBehaviour {
             healTimer = 0f;
         }
     }
+
+    void DoYouKnowDaWey()
+    {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        {
+
+        }
+    }
+
 }
