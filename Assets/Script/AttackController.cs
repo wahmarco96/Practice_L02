@@ -17,7 +17,9 @@ public class AttackController : MonoBehaviour { // this script controll the play
     float skillCD3 = 15f;
     float skillCD3Left;
     bool skill3IsReady;
-    
+
+    public Animator anim;
+
     public Player playerData;
 
 
@@ -26,8 +28,8 @@ public class AttackController : MonoBehaviour { // this script controll the play
 
     // Use this for initialization
     void Start () {
-
-	}
+        anim = GetComponent<Animator>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -38,6 +40,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
     {
         // activate 
         playerData.UseAttack();
+       
     }
 
     public void HeavyAttack()
@@ -122,6 +125,8 @@ public class AttackController : MonoBehaviour { // this script controll the play
         
         else skill3IsReady = false;
     }
+
+    
 
     
     void DeactivatedSkillTwo()

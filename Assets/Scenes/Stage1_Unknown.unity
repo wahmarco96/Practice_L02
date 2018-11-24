@@ -162,11 +162,23 @@ Prefab:
       propertyPath: gm
       value: 
       objectReference: {fileID: 1579494087}
-    - target: {fileID: 1264471536628400, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
-      propertyPath: m_TagString
-      value: Player
+    - target: {fileID: 65668855106244054, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114836838002132348, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+        type: 2}
+      propertyPath: playerAttack
+      value: 
+      objectReference: {fileID: 1743839649}
+    - target: {fileID: 114836838002132348, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 23696294737972676, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &24892066
@@ -1010,6 +1022,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a52566c810870144a38949447c28298, type: 2}
   m_IsPrefabParent: 0
+--- !u!95 &184155073 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95629523532327048, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 18526238}
 --- !u!1 &223394494
 GameObject:
   m_ObjectHideFlags: 0
@@ -5071,6 +5088,8 @@ MonoBehaviour:
   winLosePanel: {fileID: 1654117582}
   winLoseText: {fileID: 1950281119}
   settingPanel: {fileID: 805854251}
+  black: {fileID: 0}
+  anim: {fileID: 0}
   menuSettingPanel: {fileID: 0}
 --- !u!114 &1165563341
 MonoBehaviour:
@@ -6334,7 +6353,7 @@ MonoBehaviour:
   cdMask2: {fileID: 1081782933}
   cdMask3: {fileID: 580867380}
   skillIsReady: 0
-  playerData: {fileID: 1724025989}
+  anim: {fileID: 184155073}
 --- !u!1 &1550524268
 GameObject:
   m_ObjectHideFlags: 0
@@ -7993,12 +8012,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1714383301}
---- !u!114 &1724025989 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114836838002132348, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
-    type: 2}
-  m_PrefabInternal: {fileID: 18526238}
-  m_Script: {fileID: 11500000, guid: 72df68d546ff8524aa4c524e928113c8, type: 3}
 --- !u!1 &1727221104
 GameObject:
   m_ObjectHideFlags: 0
@@ -8234,6 +8247,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741621946}
   m_Mesh: {fileID: 4300104, guid: 1dc358a88a89cea48a3bee6e3e6efb69, type: 3}
+--- !u!1 &1743839648 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1836155120153758, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 18526238}
+--- !u!114 &1743839649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1743839648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd3b0b2ecfb7fc44accd34f3a0458e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  enemy: {fileID: 0}
 --- !u!1 &1786043469 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1029425565873250, guid: 3a52566c810870144a38949447c28298,

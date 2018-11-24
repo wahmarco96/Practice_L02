@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour {
 
     private void OnEnable()
     {
-        Player.OnDeath += LosePanel;
+        //Player.OnDeath += LosePanel;
     }
 
     private void OnDisable()

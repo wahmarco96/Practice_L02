@@ -13,12 +13,14 @@ public class Player : MonoBehaviour {
     public int heavyDamage = 3;
     public Image damageFlash;
     Color tempDamageFlash;
-    float timeToHeal = 10f;
+    //float timeToHeal = 10f;
     public float healTimer = 0f;
     public Attack playerAttack;
-    public Animator anim;
 
-    public AttackController attaCon;
+    
+   public Animator anim;
+
+    AttackController attacCon;
     // public delegate void Recipe();
     // public static event Recipe RecipeFound;
     public bool recipeFound = false;
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start () {
         gm = GameObject.FindGameObjectWithTag("Game Manager").GetComponent<GameManager>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         currentHealth = maxHealth;
         damageFlash = damageFlash.GetComponent<Image>();
         tempDamageFlash = damageFlash.color;
@@ -47,14 +49,27 @@ public class Player : MonoBehaviour {
     {
         // transfering my player data to others script
         // play animation as well
-        anim.Play("ComboA");
+        //attacCon.anim.Play("ComboA");
         playerAttack.InitAttack(damage);
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA"))
+        {
+            anim.SetTrigger("ContinueCombo");
+        }
+        else
+        {
+            anim.Play("ComboA");
+        }
+       
     }
 
     public void UseHeavyAttack()
     {
         anim.Play("Heavy");
         playerAttack.InitAttack(heavyDamage);
+
+        
+
     }
 
     public void MiyabiOffering(int skillsDamage)
@@ -62,24 +77,13 @@ public class Player : MonoBehaviour {
         damage = skillsDamage;
         //anim.Play("Skill01");
     }
-    /*
-    public void JamSlam(int slamDamage)
-    {
-        damage = slamDamage;
-        anim.Play("Skill02");
-    }
-
-    public void UltimateBro(int UltiDamage)
-    {
-        damage = UltiDamage;
-        anim.Play("Ultimate");
-    }
-    */
+   
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Enemy")
         {
             currentHealth -= 1f;
+            anim.Play("Hurt");
             print("hp");
         }
 
@@ -98,6 +102,7 @@ public class Player : MonoBehaviour {
         if (currentHealth < 1f)
         {
             if (OnDeath != null) OnDeath();
+            anim.Play("Dead");
             Destroy(this.gameObject);
         }
     }
