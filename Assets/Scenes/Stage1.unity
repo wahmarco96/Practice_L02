@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4768,6 +4768,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1081782931}
+--- !u!1 &1084339370 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1836155120153758, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1461895091}
+--- !u!114 &1084339373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1084339370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd3b0b2ecfb7fc44accd34f3a0458e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &1096988538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,6 +5515,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1217017950}
   m_Mesh: {fileID: 4300050, guid: 1dc358a88a89cea48a3bee6e3e6efb69, type: 3}
+--- !u!95 &1217585176 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95629523532327048, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1461895091}
 --- !u!1 &1237574740
 GameObject:
   m_ObjectHideFlags: 0
@@ -6271,7 +6293,32 @@ Prefab:
       propertyPath: m_TagString
       value: Body
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4262190671921636, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65668855106244054, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114836838002132348, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+        type: 2}
+      propertyPath: playerAttack
+      value: 
+      objectReference: {fileID: 1084339373}
+    - target: {fileID: 114836838002132348, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+        type: 2}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 1579494087}
+    - target: {fileID: 114836838002132348, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+        type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1217585176}
+    m_RemovedComponents:
+    - {fileID: 23696294737972676, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1486240244
@@ -6594,6 +6641,7 @@ MonoBehaviour:
   cdMask2: {fileID: 1081782933}
   cdMask3: {fileID: 580867380}
   skillIsReady: 0
+  anim: {fileID: 1217585176}
   playerData: {fileID: 111490823}
 --- !u!1 &1550524268
 GameObject:
