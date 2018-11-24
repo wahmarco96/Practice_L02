@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour {
     public int damage;
-    public Enemy enemy;
+     Enemy enemy;
 
 
     public void InitAttack(int power)
