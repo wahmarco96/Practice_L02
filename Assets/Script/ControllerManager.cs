@@ -12,6 +12,8 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     public float smoothness = 0.1f;
     Animator animator;
 
+    public Transform modelRoot;
+
     // Use this for initialization
     void Start()
     {
@@ -26,6 +28,16 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         dir.Normalize();
 
         animator.Play("Walking_Front");
+
+        // Control Model Rotation
+        Vector3 delta = this.transform.transform.position - initPos;
+
+        float angle = Mathf.Atan2( delta.x, delta.y) * Mathf.Rad2Deg;
+        modelRoot.rotation = Quaternion.Lerp(modelRoot.rotation, Quaternion.Euler(0, angle+player.localEulerAngles.y, 0), Time.deltaTime * 30f);
+
+
+
+
     }
 
     public void OnEndDrag(PointerEventData eventData)

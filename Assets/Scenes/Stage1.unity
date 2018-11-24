@@ -3024,6 +3024,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 708975514}
   m_Mesh: {fileID: 4300004, guid: 1dc358a88a89cea48a3bee6e3e6efb69, type: 3}
+--- !u!4 &751187182 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4448783990715278, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1461895091}
 --- !u!1 &752683619
 GameObject:
   m_ObjectHideFlags: 0
@@ -6001,6 +6006,11 @@ Prefab:
       propertyPath: damageFlash
       value: 
       objectReference: {fileID: 155698601}
+    - target: {fileID: 95629523532327048, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
   m_IsPrefabAsset: 0
@@ -8758,6 +8768,7 @@ MonoBehaviour:
   player: {fileID: 111490827}
   playerMove: {x: 0, y: 0, z: 0}
   smoothness: 1
+  modelRoot: {fileID: 751187182}
 --- !u!1 &1858655603
 GameObject:
   m_ObjectHideFlags: 0
