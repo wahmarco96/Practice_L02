@@ -11,7 +11,6 @@ public class Attack : MonoBehaviour {
     {
         // receive data from player script
         damage = power;
-        this.gameObject.SetActive(true);
     }
 
     public void EnemyReceiveDamage()
