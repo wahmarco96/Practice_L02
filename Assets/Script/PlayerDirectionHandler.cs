@@ -20,6 +20,9 @@ public class PlayerDirectionHandler : MonoBehaviour {
         Vector3 fwd = raycastRoot.forward;
         
         Debug.DrawRay(origin, fwd * 50, Color.red);
+
+        Ray ray = new Ray(origin, fwd);
+        RaycastHit hits;
     }
 
     void ReportToCamera( Direction dir)

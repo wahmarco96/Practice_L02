@@ -24,6 +24,8 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         this.transform.position = eventData.position;
         dir = this.transform.position - initPos;
         dir.Normalize();
+
+        animator.Play("Walking_Front");
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -42,8 +44,8 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         Vector3 playerMove = Vector3.zero;
         playerMove.x = dir.x;
         playerMove.z = dir.y;
-        player.Translate(playerMove.x * Time.deltaTime * 25, 0, playerMove.z * Time.deltaTime * 25, Space.World);
-        animator.SetFloat("Forward", playerMove.z, smoothness, Time.deltaTime);
-        animator.SetFloat("Left", playerMove.x, smoothness, Time.deltaTime);
+        player.Translate(playerMove.x * Time.deltaTime * 25, 0, playerMove.z * Time.deltaTime * 25, Space.Self);
+        animator.SetFloat("Forward", playerMove.z);
+        animator.SetFloat("Left", playerMove.x);
     }
 }
