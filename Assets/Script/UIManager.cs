@@ -19,19 +19,9 @@ public class UIManager : MonoBehaviour {
     [Header("Menu Setting")]
     public GameObject menuSettingPanel;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
     private void OnEnable()
     {
-        //Player.OnDeath += LosePanel;
+       Player.OnDeath += LosePanel;
     }
 
     private void OnDisable()
