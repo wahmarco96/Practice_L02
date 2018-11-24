@@ -9,7 +9,7 @@ public class EnemyTesting : MonoBehaviour
 
     NavMeshAgent agent;
     private Player player;
-    public float maxHealth = 5f;
+    public float maxHealth;
     public float currentHealth;
     public Image currentHealthBar;
     public bool playerInRange;
@@ -19,9 +19,9 @@ public class EnemyTesting : MonoBehaviour
     public float enemyDeathCount;
 
     // Use this for initialization
-    void Start()
+    protected virtual void Start()
     {
-        this.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         agent = GetComponent<NavMeshAgent>();
         currentHealth = maxHealth;
         originPos = this.transform.position;
@@ -37,7 +37,7 @@ public class EnemyTesting : MonoBehaviour
 
     }
     
-    IEnumerator CheckPlayerPos()
+    protected IEnumerator CheckPlayerPos()
     {
         if (playerInRange == true)
         {
@@ -51,7 +51,7 @@ public class EnemyTesting : MonoBehaviour
         }
     }
 
-    void NoticePlayerInRange()
+    protected void NoticePlayerInRange()
     {
         if (Vector3.Distance(player.transform.position, this.transform.position) < 60f)
         {
