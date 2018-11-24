@@ -65,17 +65,10 @@ public class Player : MonoBehaviour {
 
     public void UseHeavyAttack()
     {
-        //anim.Play("Heavy");
+        anim.Play("Heavy");
         playerAttack.InitAttack(heavyDamage);
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Heavy"))
-        {
-            anim.SetTrigger("ContinueHeavyCombo");
-        }
-        else
-        {
-            anim.Play("ComboA");
-        }
+        
 
     }
 
