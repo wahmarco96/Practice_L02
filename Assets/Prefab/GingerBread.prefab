@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 54852059759965424}
   - component: {fileID: 65898748494086218}
   - component: {fileID: 195788756437296374}
-  - component: {fileID: 114459111600746660}
+  - component: {fileID: 114627872776015708}
   m_Layer: 0
   m_Name: GingerBread
   m_TagString: Enemy
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114459111600746660
+--- !u!114 &114627872776015708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,16 +268,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1876389195640790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2288eced59196744dac9a4ec894d3bea, type: 3}
+  m_Script: {fileID: 11500000, guid: 65d45ca4219252f44b088293732006bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  currentHealth: 0
   healthCanvas: {fileID: 1985233836091512}
   currentHealthBar: {fileID: 114310522956848770}
-  playerInRange: 0
   spawnCounting: {fileID: 0}
-  enemyDeathCount: 0
 --- !u!114 &114664906900609968
 MonoBehaviour:
   m_ObjectHideFlags: 1

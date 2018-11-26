@@ -5,10 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Knife
   - Recipe
   - Game Manager
-  - Body
   layers:
   - Default
   - TransparentFX

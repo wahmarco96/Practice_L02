@@ -74,14 +74,14 @@ GameObject:
   - component: {fileID: 54334746309040056}
   - component: {fileID: 65742607381994928}
   - component: {fileID: 195518252119279296}
-  - component: {fileID: 114836721235496976}
+  - component: {fileID: 114124128720071450}
   m_Layer: 0
   m_Name: Bread
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1962857908485248
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1539812053276074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11, y: 0, z: 92.7}
+  m_LocalPosition: {x: 11.6, y: 0, z: 92.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4838920240923206}
@@ -196,6 +196,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.7740734, y: 3.8601375, z: 2.215285}
   m_Center: {x: 0.09374142, y: 1.9620302, z: -0.0903244}
+--- !u!114 &114124128720071450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1539812053276074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d45ca4219252f44b088293732006bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthCanvas: {fileID: 1193604328520788}
+  currentHealthBar: {fileID: 114940942542063778}
+  spawnCounting: {fileID: 0}
 --- !u!114 &114477063484705454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,24 +274,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114836721235496976
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539812053276074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2288eced59196744dac9a4ec894d3bea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 0
-  currentHealth: 0
-  healthCanvas: {fileID: 1193604328520788}
-  currentHealthBar: {fileID: 114940942542063778}
-  playerInRange: 0
-  spawnCounting: {fileID: 0}
-  enemyDeathCount: 0
 --- !u!114 &114940942542063778
 MonoBehaviour:
   m_ObjectHideFlags: 1

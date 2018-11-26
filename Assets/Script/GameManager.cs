@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour {
     public GameObject breadSetThree;
     
     public bool recIsFound;
-    public bool firstSetFound;
-    public bool secondSetFound;
+    bool firstSetFound;
+    bool secondSetFound;
 
     private void Awake()
     {
@@ -34,10 +34,10 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        ShowWinBreadOne();
+        DisplayWinBread();
 	}
 
-    void ShowWinBreadOne()
+    void DisplayWinBread()
     {
         if (recIsFound == true && firstSetFound == false) 
         {

@@ -4,37 +4,38 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour {
     
-    public GameObject enemy;
-    public GameObject enemyBoss;
+    public GameObject[] enemyArmy;
+    public GameObject[] enemyBoss;
     public Transform[] spawnPoint;
 
-    float enemyDeath;
+    float countingEnemyDeath;
 
     // Use this for initialization
     void Start () {
-     SpawnCreep();
+      SpawnCreep();
     }
 
     void Update(){
-        SpawnBossCondition();
+      SpawnBossCondition();
     }
 
     void SpawnCreep()
     {
         for (int i = 0; i < spawnPoint.Length; i++)
         {
-            Instantiate(enemy, spawnPoint[i].position, Quaternion.identity);
+            int m = Random.Range(0, enemyBoss.Length);
+            Instantiate(enemyArmy[m], spawnPoint[i].position, Quaternion.identity);
         }
     }
 
     public void CountingEnemyDeath(float enemyDeathCount)
     {
-        enemyDeath = enemyDeathCount;
+        countingEnemyDeath = enemyDeathCount;
     }
 
     void SpawnBossCondition()
     {
-        if (enemyDeath >= 60)
+        if (countingEnemyDeath >= 60)
         {
             SpawnBoss();
         }
@@ -43,6 +44,7 @@ public class SpawnPoint : MonoBehaviour {
      void SpawnBoss()
     {
         int i = Random.Range(0, spawnPoint.Length);
-        Instantiate(enemyBoss, spawnPoint[i].position, Quaternion.identity);
+        int e = Random.Range(0, enemyBoss.Length);
+        Instantiate(enemyBoss[e], spawnPoint[i].position, Quaternion.identity);
     }
 }

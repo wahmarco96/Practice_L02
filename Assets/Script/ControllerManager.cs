@@ -56,7 +56,7 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         Vector3 playerMove = Vector3.zero;
         playerMove.x = dir.x;
         playerMove.z = dir.y;
-        player.Translate(playerMove.x * Time.deltaTime * 25, 0, playerMove.z * Time.deltaTime * 25, Space.Self);
+        player.Translate(playerMove.x * Time.deltaTime * 50, 0, playerMove.z * Time.deltaTime * 50, Space.Self);
         animator.SetFloat("Forward", playerMove.z);
         animator.SetFloat("Left", playerMove.x);
     }

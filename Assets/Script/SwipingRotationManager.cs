@@ -6,8 +6,6 @@ using UnityEngine;
 public class SwipingRotationManager : MonoBehaviour {
 
     public Vector3 rotation;
-    Vector3 origin;
-
 
 	// Use this for initialization
 	void Start () {
