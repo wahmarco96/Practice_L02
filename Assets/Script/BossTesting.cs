@@ -5,33 +5,26 @@ using UnityEngine;
 public class BossTesting : EnemyTesting {
     public GameObject rec;
     GameObject recCopies;
-    bool bossDeath = false;
 
 
 	// Use this for initialization
 	protected override void Start () {
+        maxHealth = 20f;
         base.Start();
-        maxHealth = 10f;
 	}
 	
 	// Update is called once per frame
 	public virtual void Update () {
         base.Update();
-	}
-
-    void Death()
-    {
-        Destroy(this.gameObject);
-        bossDeath = true;
         Drops();
     }
-
+    
     void Drops()
     {
-        if (bossDeath == true)
+        if (bossIsDead == true)
         {
-           recCopies = Instantiate(rec, this.transform.position, Quaternion.identity);
-           bossDeath = false;
+            Instantiate(rec, this.transform.position, Quaternion.identity);
+            bossIsDead = false;
         }
     }
 }

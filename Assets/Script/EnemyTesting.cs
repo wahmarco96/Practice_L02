@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class EnemyTesting : MonoBehaviour
 {
-
     NavMeshAgent agent;
     private Player player;
     public float maxHealth;
     public float currentHealth;
+    public GameObject healthCanvas;
     public Image currentHealthBar;
     public bool playerInRange;
     Vector3 originPos;
@@ -18,12 +18,15 @@ public class EnemyTesting : MonoBehaviour
     public SpawnPoint spawnCounting;
     public float enemyDeathCount;
 
+    public bool bossIsDead = false;
+
     // Use this for initialization
     protected virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         agent = GetComponent<NavMeshAgent>();
         currentHealth = maxHealth;
+        healthCanvas.SetActive(false);
         originPos = this.transform.position;
 
         enemyDeathCount = 0f;
@@ -32,12 +35,12 @@ public class EnemyTesting : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        StartCoroutine(CheckPlayerPos());
+        StartCoroutine(ChasePlayer());
         NoticePlayerInRange();
 
     }
     
-    protected IEnumerator CheckPlayerPos()
+    protected IEnumerator ChasePlayer()
     {
         if (playerInRange == true)
         {
@@ -73,6 +76,8 @@ public class EnemyTesting : MonoBehaviour
 
     void CheckCurrentHealth()
     {
+
+        healthCanvas.SetActive(true);
         currentHealthBar.fillAmount = currentHealth / maxHealth;
     }
 
@@ -83,6 +88,7 @@ public class EnemyTesting : MonoBehaviour
             Destroy(this.gameObject);
             enemyDeathCount += 1;
             spawnCounting.CountingEnemyDeath(enemyDeathCount);
+            bossIsDead = true;
         }
     }
 }
