@@ -50,8 +50,7 @@ public class Player : MonoBehaviour {
         // transfering my player data to others script
         // play animation as well
         //attacCon.anim.Play("ComboA");
-        playerAttack.InitAttack(damage);
-
+   
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA"))
         {
             anim.SetTrigger("ContinueCombo");
@@ -61,16 +60,24 @@ public class Player : MonoBehaviour {
         {
             anim.Play("ComboA");
         }
-       
+
+        playerAttack.InitAttack(damage);
+
     }
 
     public void UseHeavyAttack()
     {
-        anim.Play("Heavy");
-        playerAttack.InitAttack(heavyDamage);
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") || anim.GetCurrentAnimatorStateInfo(0).IsName("ComboB"))
+        {
+            anim.SetTrigger("ContinueToHeavy");
+        }
+        else
+        {
+            anim.Play("Heavy");
+        }
 
         
-
+        playerAttack.InitAttack(heavyDamage);
     }
 
     public void MiyabiOffering(int skillsDamage)
@@ -137,9 +144,13 @@ public class Player : MonoBehaviour {
 
     void DoYouKnowDaWey()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") || (anim.GetCurrentAnimatorStateInfo(1).IsName("Heavy")))
         {
-
+            anim.SetTrigger("ContinueHeavyCombo");
+        }
+        else
+        {
+            anim.Play("Heavy");
         }
     }
 

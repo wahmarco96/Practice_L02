@@ -89,4 +89,13 @@ public class Enemy : MonoBehaviour {
             bossIsDead = true;
         }
     }
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Sword")
+        {
+            currentHealth -= 1;
+        }
+    }
+
 }
