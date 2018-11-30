@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
         get { return instance; }
     }
 
+    GameObject[] winBreads;
     public GameObject breadSetOne;
     public GameObject breadSetTwo;
     public GameObject breadSetThree;
@@ -18,21 +19,24 @@ public class GameManager : MonoBehaviour {
     bool firstSetFound;
     bool secondSetFound;
 
+
     private void Awake()
     {
         if (instance == null) instance = this;
         else if (instance != this) Destroy(this.gameObject);
     }
-
-    // Use this for initialization
+    
     void Start () {
         DontDestroyOnLoad(this.gameObject);
+        winBreads = GameObject.FindGameObjectsWithTag("Breads");
+        breadSetOne = winBreads[2];
+        breadSetTwo = winBreads[1];
+        breadSetThree = winBreads[0];
         breadSetOne.SetActive(false);
         breadSetTwo.SetActive(false);
         breadSetThree.SetActive(false);
     }
 	
-	// Update is called once per frame
 	void Update () {
         DisplayWinBread();
 	}

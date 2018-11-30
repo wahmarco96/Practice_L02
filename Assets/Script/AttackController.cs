@@ -40,7 +40,6 @@ public class AttackController : MonoBehaviour { // this script controll the play
     {
         // activate 
         playerData.UseAttack();
-       
     }
 
     public void HeavyAttack()
@@ -53,19 +52,15 @@ public class AttackController : MonoBehaviour { // this script controll the play
         if (skillIsReady == true)
         {
             playerData.MiyabiOffering(5);
-            Debug.Log("Skill1Activated");
             Invoke("DeactivatedSkillOne", 4f);
             skillCDLeft = skillCD;
             playerData.anim.Play("Skill01");
         }
-
-        else Debug.Log("Skill is not available yet");
     }
 
     void DeactivatedSkillOne()
     {
         playerData.MiyabiOffering(1);
-        Debug.Log("skill is finished");
     }
 
 
@@ -74,11 +69,8 @@ public class AttackController : MonoBehaviour { // this script controll the play
         if(skill2IsReady == true)
         {
             playerData.anim.Play("Skill02");
-            Debug.Log("skill2");
             skillCD2Left = skillCD2;
         }
-
-        else Debug.Log("Skill 2 is not available yet");
     }
 
     public void SkillThree()
@@ -86,11 +78,8 @@ public class AttackController : MonoBehaviour { // this script controll the play
         if (skill3IsReady == true)
         {
             playerData.anim.Play("Ultimate");
-            Debug.Log("skill3");
             skillCD3Left = skillCD3;
         }
-
-        else Debug.Log("Skill 3 is not available yet");
     }
 
     void SkillCoolDown()
@@ -124,18 +113,5 @@ public class AttackController : MonoBehaviour { // this script controll the play
         }
         
         else skill3IsReady = false;
-    }
-
-    
-
-    
-    void DeactivatedSkillTwo()
-    {
-
-    }
-
-    void DeactivatedSkillThree()
-    {
-
     }
 }

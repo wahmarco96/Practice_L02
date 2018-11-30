@@ -36,7 +36,6 @@ public class Player : MonoBehaviour {
         tempDamageFlash = damageFlash.color;
         tempDamageFlash.a = 0f;
         damageFlash.color = tempDamageFlash;
-        
     }
 	
 	// Update is called once per frame
@@ -62,7 +61,6 @@ public class Player : MonoBehaviour {
         }
 
         playerAttack.InitAttack(damage);
-
     }
 
     public void UseHeavyAttack()
@@ -75,7 +73,6 @@ public class Player : MonoBehaviour {
         {
             anim.Play("Heavy");
         }
-
         
         playerAttack.InitAttack(heavyDamage);
     }
@@ -92,7 +89,6 @@ public class Player : MonoBehaviour {
         {
             currentHealth -= 1f;
             anim.Play("Hurt");
-            print("hp");
         }
 
         if(collision.gameObject.tag == "Recipe")
@@ -102,8 +98,6 @@ public class Player : MonoBehaviour {
             recipeFound = false;
         }
     }
-
-   
 
     public void IsDeath()
     {
@@ -153,5 +147,4 @@ public class Player : MonoBehaviour {
             anim.Play("Heavy");
         }
     }
-
 }

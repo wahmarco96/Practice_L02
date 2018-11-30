@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour {
     bool playerInRange;
     Vector3 originPos;
 
-    public SpawnPoint spawnCounting;
+    public SpawnManager spawnCounting;
     float enemyDeathCount;
 
     protected bool bossIsDead = false;
