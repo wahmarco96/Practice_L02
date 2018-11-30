@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour {
     public bool recIsFound;
     bool firstSetFound;
     bool secondSetFound;
+    bool allRecipeFound;
 
 
     private void Awake()
@@ -55,6 +57,7 @@ public class GameManager : MonoBehaviour {
 
             breadSetThree.SetActive(true);
             recIsFound = false;
+            allRecipeFound = true;
         }
 
         if (recIsFound == true && firstSetFound == true)
@@ -64,4 +67,12 @@ public class GameManager : MonoBehaviour {
             secondSetFound = true;
         }
     }
+
+  /*void WinGame()
+    {
+        if(allRecipeFound)
+        {
+            SceneManager.LoadScene(3);
+        }
+    } */
 }
