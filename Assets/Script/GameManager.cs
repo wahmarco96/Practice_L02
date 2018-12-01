@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -20,23 +21,41 @@ public class GameManager : MonoBehaviour {
     bool firstSetFound;
     bool secondSetFound;
     bool allRecipeFound;
+    public int level;
+
+    public Animator anim;
+    public Image black;
 
 
     private void Awake()
     {
         if (instance == null) instance = this;
         else if (instance != this) Destroy(this.gameObject);
+
+       
     }
-    
-    void Start () {
-        DontDestroyOnLoad(this.gameObject);
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
         winBreads = GameObject.FindGameObjectsWithTag("Breads");
         breadSetOne = winBreads[2];
         breadSetTwo = winBreads[1];
         breadSetThree = winBreads[0];
-        breadSetOne.SetActive(false);
-        breadSetTwo.SetActive(false);
-        breadSetThree.SetActive(false);
+    }
+
+    void Start () {
+        DontDestroyOnLoad(this.gameObject);
     }
 	
 	void Update () {
@@ -45,16 +64,19 @@ public class GameManager : MonoBehaviour {
 
     void DisplayWinBread()
     {
+       
+
         if (recIsFound == true && firstSetFound == false) 
         {
                 breadSetOne.SetActive(true);
                 recIsFound = false;
                 firstSetFound = true;
+                StartCoroutine(FadingScene());
+                level += 1;
         }
 
         if (recIsFound == true && secondSetFound == true)
         {
-
             breadSetThree.SetActive(true);
             recIsFound = false;
             allRecipeFound = true;
@@ -65,14 +87,23 @@ public class GameManager : MonoBehaviour {
             breadSetTwo.SetActive(true);
             recIsFound = false;
             secondSetFound = true;
+            SceneManager.LoadScene(2);
+            level += 2;
         }
     }
 
-  /*void WinGame()
+    /*void WinGame()
+      {
+          if(allRecipeFound)
+          {
+              SceneManager.LoadScene(3);
+          }
+      } */
+
+    public IEnumerator FadingScene()
     {
-        if(allRecipeFound)
-        {
-            SceneManager.LoadScene(3);
-        }
-    } */
+        anim.SetBool("Fade", true);
+        yield return new WaitUntil(() => black.color.a == 1);
+        SceneManager.LoadScene(2);
+    }
 }
