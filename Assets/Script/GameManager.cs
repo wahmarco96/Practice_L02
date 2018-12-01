@@ -56,6 +56,9 @@ public class GameManager : MonoBehaviour {
 
     void Start () {
         DontDestroyOnLoad(this.gameObject);
+        breadSetOne.SetActive(false);
+        breadSetTwo.SetActive(false);
+        breadSetThree.SetActive(false);
     }
 	
 	void Update () {
@@ -64,8 +67,6 @@ public class GameManager : MonoBehaviour {
 
     void DisplayWinBread()
     {
-       
-
         if (recIsFound == true && firstSetFound == false) 
         {
                 breadSetOne.SetActive(true);
