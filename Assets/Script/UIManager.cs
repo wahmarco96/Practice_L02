@@ -16,7 +16,6 @@ public class UIManager : MonoBehaviour {
     public Image black;
     public Animator anim;
     
-    [Header("Menu Setting")]
     public GameObject menuSettingPanel;
 
     private void OnEnable()
@@ -34,7 +33,7 @@ public class UIManager : MonoBehaviour {
         winLosePanel.SetActive(true);
         winLoseText.text = "Lose";
     }
-
+    
     public void OpenSetting()
     {
         settingPanel.SetActive(true);
@@ -79,7 +78,7 @@ public class UIManager : MonoBehaviour {
     public void NewGame()
     {
         index = 1;
-        StartCoroutine(FadingScene());
+       StartCoroutine(FadingScene());
     }
 
     IEnumerator FadingScene()

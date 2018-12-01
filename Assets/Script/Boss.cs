@@ -6,7 +6,6 @@ public class Boss : Enemy
 {
 
     public GameObject rec;
-    GameObject recCopies;
     
     // Use this for initialization
     protected override void Start()
@@ -26,7 +25,7 @@ public class Boss : Enemy
     {
         if (bossIsDead == true)
         {
-            recCopies = Instantiate(rec, this.transform.position, Quaternion.identity);
+            Instantiate(rec, this.transform.position, Quaternion.identity);
             bossIsDead = false;
         }
     }

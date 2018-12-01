@@ -8,6 +8,7 @@ TagManager:
   - Recipe
   - Game Manager
   - Breads
+  - FadingBlack
   layers:
   - Default
   - TransparentFX
