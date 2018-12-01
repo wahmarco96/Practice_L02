@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Boss : Enemy
 {
-
     public GameObject rec;
     
     // Use this for initialization
     protected override void Start()
     {
-        maxHealth = 20f;
         base.Start();
+        maxHealth = 20f;
+        maxHealth += gameLevel;
     }
 
     // Update is called once per frame

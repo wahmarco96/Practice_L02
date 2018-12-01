@@ -7,8 +7,9 @@ public class Creep : Enemy {
 
     // Use this for initialization
     protected override void Start () {
-        maxHealth = 5f;
         base.Start();
+        maxHealth = 5f;
+        maxHealth += gameLevel;
 	}
 	
 	// Update is called once per frame

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour {
     NavMeshAgent agent;
     private Player player;
-    protected float maxHealth;
+    public float maxHealth;
     float currentHealth;
     public GameObject healthCanvas;
     public Image currentHealthBar;
@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour {
     float enemyDeathCount;
 
     protected bool bossIsDead = false;
+    public float gameLevel;
     
     protected virtual void Start()
     {
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour {
         originPos = this.transform.position;
 
         enemyDeathCount = 0f;
+        gameLevel = GameManager.Instance.level;
     }
 
     // Update is called once per frame

@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
     bool firstSetFound;
     bool secondSetFound;
     bool allRecipeFound;
-    public int level;
+    public float level;
 
     Animator anim;
     Image black;
