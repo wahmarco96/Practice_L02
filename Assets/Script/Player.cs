@@ -17,6 +17,8 @@ public class Player : MonoBehaviour {
     public float healTimer = 0f;
     public Attack playerAttack;
 
+    public ControllerManager coMa;
+    public bool isAttacking;
     
    public Animator anim;
 
@@ -49,38 +51,44 @@ public class Player : MonoBehaviour {
         // transfering my player data to others script
         // play animation as well
         //attacCon.anim.Play("ComboA");
+
    
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA"))
-        {
-            anim.SetTrigger("ContinueCombo");
-            
-        }
-        else
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Walking_Front") || anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
             anim.Play("ComboA");
         }
+        else
+        {
+            anim.SetTrigger("ContinueCombo");
+        }
 
         playerAttack.InitAttack(damage);
+        isAttacking = true;
     }
 
     public void UseHeavyAttack()
     {
-        if(anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") || anim.GetCurrentAnimatorStateInfo(0).IsName("ComboB"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboC") == false && anim.GetCurrentAnimatorStateInfo(0).IsName("Heavy") == false) 
         {
-            anim.SetTrigger("ContinueToHeavy");
-        }
-        else
-        {
-            anim.Play("Heavy");
-        }
+
+            if(anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") || anim.GetCurrentAnimatorStateInfo(0).IsName("ComboB"))
+            {
+             anim.SetTrigger("ContinueToHeavy");
+            }
+            else
+            {
+                 anim.Play("Heavy");
+            }
         
-        playerAttack.InitAttack(heavyDamage);
+            playerAttack.InitAttack(heavyDamage);
+            isAttacking = true;
+        }
     }
 
     public void MiyabiOffering(int skillsDamage)
     {
         damage = skillsDamage;
-        //anim.Play("Skill01");
+        
     }
    
     void OnCollisionEnter(Collision collision)
@@ -138,7 +146,7 @@ public class Player : MonoBehaviour {
 
     void DoYouKnowDaWey()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") || (anim.GetCurrentAnimatorStateInfo(1).IsName("Heavy")))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") && (anim.GetCurrentAnimatorStateInfo(1).IsName("Heavy")))
         {
             anim.SetTrigger("ContinueHeavyCombo");
         }
@@ -147,4 +155,6 @@ public class Player : MonoBehaviour {
             anim.Play("Heavy");
         }
     }
+
+   
 }

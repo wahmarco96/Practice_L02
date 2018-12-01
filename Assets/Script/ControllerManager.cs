@@ -12,6 +12,8 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     public float smoothness = 0.1f;
     Animator animator;
 
+    public Player playerdata;
+
     public Transform modelRoot;
 
     // Use this for initialization
@@ -36,8 +38,6 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         modelRoot.rotation = Quaternion.Lerp(modelRoot.rotation, Quaternion.Euler(0, angle+player.localEulerAngles.y, 0), Time.deltaTime * 30f);
 
 
-
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -51,7 +51,9 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         Move();
     }
 
-    void Move()
+    
+
+    public void Move()
     {
         Vector3 playerMove = Vector3.zero;
         playerMove.x = dir.x;
