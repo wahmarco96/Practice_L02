@@ -92,11 +92,12 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    private void OnCollisionEnter(Collision col)
+    private void OnTriggerEnter(Collider other)
     {
-        if (col.gameObject.tag == "Sword")
+        if(other.gameObject.tag == "Sword")
         {
-            currentHealth -= 1;
+            maxHealth -= 1f;
+            Destroy(gameObject);
         }
     }
 

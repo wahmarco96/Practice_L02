@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
     public Attack playerAttack;
 
     public ControllerManager coMa;
-    public bool isAttacking;
+    public bool isAttacking = false;
     
    public Animator anim;
 
@@ -38,6 +38,9 @@ public class Player : MonoBehaviour {
         tempDamageFlash = damageFlash.color;
         tempDamageFlash.a = 0f;
         damageFlash.color = tempDamageFlash;
+
+        
+        
     }
 	
 	// Update is called once per frame
@@ -57,13 +60,17 @@ public class Player : MonoBehaviour {
         {
             anim.Play("ComboA");
         }
-        else
+        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA"))
         {
             anim.SetTrigger("ContinueCombo");
         }
+        else
+        {
+            anim.SetTrigger("ComboA");
+        }
 
         playerAttack.InitAttack(damage);
-        isAttacking = true;
+        
     }
 
     public void UseHeavyAttack()
@@ -81,7 +88,7 @@ public class Player : MonoBehaviour {
             }
         
             playerAttack.InitAttack(heavyDamage);
-            isAttacking = true;
+            
         }
     }
 
@@ -96,7 +103,7 @@ public class Player : MonoBehaviour {
         if(collision.gameObject.tag == "Enemy")
         {
             currentHealth -= 1f;
-            anim.Play("Hurt");
+            Hurting();
         }
 
         if(collision.gameObject.tag == "Recipe")
@@ -144,17 +151,19 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void DoYouKnowDaWey()
+    void Hurting()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") && (anim.GetCurrentAnimatorStateInfo(1).IsName("Heavy")))
+        if(anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") == false && anim.GetCurrentAnimatorStateInfo(0).IsName("ComboB") == false
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("ComboC") == false && anim.GetCurrentAnimatorStateInfo(0).IsName("Heavy") == false
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Skill01") == false && anim.GetCurrentAnimatorStateInfo(0).IsName("Skill02") == false
+            && anim.GetCurrentAnimatorStateInfo(0).IsName("Ultimate") == false)
         {
-            anim.SetTrigger("ContinueHeavyCombo");
+            anim.Play("Hurt");
         }
-        else
-        {
-            anim.Play("Heavy");
-        }
+        
+
+        
     }
 
-   
+
 }

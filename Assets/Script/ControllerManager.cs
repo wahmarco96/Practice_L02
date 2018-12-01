@@ -30,6 +30,7 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         dir.Normalize();
 
         animator.Play("Walking_Front");
+       
 
         // Control Model Rotation
         Vector3 delta = this.transform.transform.position - initPos;
@@ -49,10 +50,11 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     void Update()
     {
         Move();
+        StopMoving();
     }
 
     
-
+    
     public void Move()
     {
         Vector3 playerMove = Vector3.zero;
@@ -62,4 +64,15 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         animator.SetFloat("Forward", playerMove.z);
         animator.SetFloat("Left", playerMove.x);
     }
+    
+    public void StopMoving()
+    {
+        if(playerdata.isAttacking == false)
+        {
+            Invoke("Move", 0f);
+        }
+    }
+
+   
+
 }

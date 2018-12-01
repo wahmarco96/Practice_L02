@@ -9,6 +9,7 @@ TagManager:
   - Game Manager
   - Breads
   - FadingBlack
+  - Sword
   layers:
   - Default
   - TransparentFX
