@@ -8,7 +8,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
     public Image cdMask1;
     public Image cdMask2;
     public Image cdMask3;
-    float skillCD = 5f;
+    float skillCD = 8f;
     float skillCDLeft;
     public bool skillIsReady;
     float skillCD2 = 10f;
@@ -51,6 +51,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
     {
         if (skillIsReady == true)
         {
+            AudioManager.Instance.SfxBuff();
             playerData.MiyabiOffering(5);
             Invoke("DeactivatedSkillOne", 4f);
             skillCDLeft = skillCD;
@@ -69,6 +70,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
         if(skill2IsReady == true)
         {
             playerData.anim.Play("Skill02");
+            AudioManager.Instance.SfxJumpSlash();
             skillCD2Left = skillCD2;
         }
     }
@@ -77,6 +79,7 @@ public class AttackController : MonoBehaviour { // this script controll the play
     {
         if (skill3IsReady == true)
         {
+            AudioManager.Instance.SfxUlti();
             playerData.anim.Play("Ultimate");
             skillCD3Left = skillCD3;
         }

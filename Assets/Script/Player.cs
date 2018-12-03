@@ -104,6 +104,7 @@ public class Player : MonoBehaviour {
         {
             currentHealth -= 1f;
             Hurting();
+            AudioManager.Instance.SfxHurt();
         }
 
         if(collision.gameObject.tag == "Recipe")
@@ -119,6 +120,7 @@ public class Player : MonoBehaviour {
         if (currentHealth < 1f)
         {
             if (OnDeath != null) OnDeath();
+            AudioManager.Instance.SfxLose();
             anim.Play("Dead");
             Destroy(this.gameObject);
         }

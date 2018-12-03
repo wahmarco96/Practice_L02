@@ -70,9 +70,6 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         if(playerdata.isAttacking == false)
         {
             Invoke("Move", 0f);
-        }
+        } 
     }
-
-   
-
 }

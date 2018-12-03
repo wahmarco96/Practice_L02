@@ -10,6 +10,7 @@ TagManager:
   - Breads
   - FadingBlack
   - Sword
+  - SpawnManager
   layers:
   - Default
   - TransparentFX

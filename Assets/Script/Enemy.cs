@@ -20,9 +20,11 @@ public class Enemy : MonoBehaviour {
     protected bool bossIsDead = false;
     public float gameLevel;
     
+
     protected virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        spawnCounting = GameObject.FindGameObjectWithTag("SpawnManager").GetComponent<SpawnManager>();
         agent = GetComponent<NavMeshAgent>();
         healthCanvas.SetActive(false);
         currentHealth = maxHealth;
@@ -37,7 +39,6 @@ public class Enemy : MonoBehaviour {
     {
         StartCoroutine(ChasePlayer());
         NoticePlayerInRange();
-
     }
 
     protected IEnumerator ChasePlayer()

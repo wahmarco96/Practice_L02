@@ -43,14 +43,4 @@ public class SpawnManager : MonoBehaviour {
             Instantiate(enemyBoss[e], spawnPoint[i].position, Quaternion.identity);
         }
     }
-
-   /* IEnumerator  SpawnCreep2()
-    {
-        for (int i = 0; i < spawnPoint.Length; i++)
-        {
-            int m = Random.Range(0, enemyBoss.Length);
-            Instantiate(enemyArmy[m], spawnPoint[i].position, Quaternion.identity);
-        }
-        yield return WaitUntil(SceneManager.LoadScene(2));
-    }*/
 }
