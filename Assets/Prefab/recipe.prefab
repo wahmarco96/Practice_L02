@@ -21,9 +21,11 @@ GameObject:
   - component: {fileID: 4380924895137808}
   - component: {fileID: 33522962820408198}
   - component: {fileID: 23731625110830764}
+  - component: {fileID: 114332762631914524}
+  - component: {fileID: 65792982254364470}
   m_Layer: 0
   m_Name: recipe
-  m_TagString: Untagged
+  m_TagString: Recipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +85,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1643503257551822}
   m_Mesh: {fileID: 4300000, guid: 7de8cceda36b0ce47b395465e636102d, type: 3}
+--- !u!65 &65792982254364470
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643503257551822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.92, y: 3.04, z: 0.08}
+  m_Center: {x: 0, y: 1.52, z: 0.04}
+--- !u!114 &114332762631914524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1643503257551822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab7f4370e1dfaf41af2c2285a736aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
