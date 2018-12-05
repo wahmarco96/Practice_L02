@@ -67,9 +67,9 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     
     public void StopMoving()
     {
-        if(playerdata.isAttacking == false)
+       /* if(playerdata.isAttacking == false)
         {
             Invoke("Move", 0f);
-        } 
+        } */
     }
 }
