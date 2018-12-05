@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour {
     public GameObject[] enemyArmy;
     public GameObject[] enemyBoss;
     public Transform[] spawnPoint;
-    float countingEnemyDeath;
+    public float countingEnemyDeath;
 
     void Start()
     {

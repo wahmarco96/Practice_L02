@@ -45,17 +45,7 @@ public class UIManager : MonoBehaviour {
         settingPanel.SetActive(false);
         Time.timeScale = 1f;
     }
-
-    public void OpenMenuSetting()
-    {
-        menuSettingPanel.SetActive(true);
-    }
-
-    public void CloseMenuSettingPanel()
-    {
-        menuSettingPanel.SetActive(false);
-    }
-
+    
     public void QuitGame()
     {
         Application.Quit();

@@ -298,10 +298,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca609ddb8513ea43842263bd4c880c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   healthCanvas: {fileID: 1222215146654478}
   currentHealthBar: {fileID: 114521339166595542}
   spawnCounting: {fileID: 0}
-  rec: {fileID: 1157697916151706, guid: 332fa2218c7ac0d4888963b5dd1541af, type: 2}
+  gameLevel: 0
+  rec: {fileID: 1643503257551822, guid: cd8e387848f5ae14a9adcaf108a59d63, type: 2}
 --- !u!195 &195185466946748616
 NavMeshAgent:
   m_ObjectHideFlags: 1
