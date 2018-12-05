@@ -55,41 +55,45 @@ public class Player : MonoBehaviour {
         // play animation as well
         //attacCon.anim.Play("ComboA");
 
-   
+
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Walking_Front") || anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
             anim.Play("ComboA");
         }
+
         else if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA"))
         {
             anim.SetTrigger("ContinueCombo");
         }
-        else
+        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboB"))
         {
-            anim.SetTrigger("ComboA");
+            anim.SetTrigger("ContinueCombo2");
+        }
+
+        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("Heavy"))
+        {
+            anim.SetTrigger("ContinueSpecialCombo");
         }
 
         playerAttack.InitAttack(damage);
-        
+
     }
 
     public void UseHeavyAttack()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboC") == false && anim.GetCurrentAnimatorStateInfo(0).IsName("Heavy") == false) 
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Walking_Front") || anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-
-            if(anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") || anim.GetCurrentAnimatorStateInfo(0).IsName("ComboB"))
-            {
-             anim.SetTrigger("ContinueToHeavy");
-            }
-            else
-            {
-                 anim.Play("Heavy");
-            }
-        
-            playerAttack.InitAttack(heavyDamage);
-            
+            anim.Play("Heavy");
         }
+
+        else if (anim.GetCurrentAnimatorStateInfo(0).IsName("ComboA") || anim.GetCurrentAnimatorStateInfo(0).IsName("ComboB"))
+        {
+            anim.SetTrigger("ContinueSpecialCombo");
+        }
+
+
+        playerAttack.InitAttack(heavyDamage);
+
     }
 
     public void MiyabiOffering(int skillsDamage)

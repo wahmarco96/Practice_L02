@@ -12,6 +12,8 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
     public float smoothness = 0.1f;
     Animator animator;
 
+    public bool wtf = true;
+
     public Player playerdata;
 
     public Transform modelRoot;
@@ -28,17 +30,19 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         this.transform.position = eventData.position;
         dir = this.transform.position - initPos;
         dir.Normalize();
+        
+        if (wtf == true)
+        {
+            animator.Play("Walking_Front");
 
-        animator.Play("Walking_Front");
-       
-
+        }
+        
         // Control Model Rotation
         Vector3 delta = this.transform.transform.position - initPos;
 
         float angle = Mathf.Atan2( delta.x, delta.y) * Mathf.Rad2Deg;
         modelRoot.rotation = Quaternion.Lerp(modelRoot.rotation, Quaternion.Euler(0, angle+player.localEulerAngles.y, 0), Time.deltaTime * 30f);
-
-
+        
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -49,12 +53,19 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
 
     void Update()
     {
-        Move();
-        StopMoving();
+        //Move();
+        WatTheFak();
+        CheckTheFak();
+    }
+    void WatTheFak()
+    {
+        if (wtf == true)
+        {
+            Move();
+
+        }
     }
 
-    
-    
     public void Move()
     {
         Vector3 playerMove = Vector3.zero;
@@ -64,12 +75,19 @@ public class ControllerManager: MonoBehaviour, IDragHandler, IEndDragHandler
         animator.SetFloat("Forward", playerMove.z);
         animator.SetFloat("Left", playerMove.x);
     }
-    
-    public void StopMoving()
+
+    public void CheckTheFak()
     {
-       /* if(playerdata.isAttacking == false)
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("ComboA") == false && animator.GetCurrentAnimatorStateInfo(0).IsName("ComboB") == false
+            && animator.GetCurrentAnimatorStateInfo(0).IsName("ComboC") == false && animator.GetCurrentAnimatorStateInfo(0).IsName("Heavy") == false
+            && animator.GetCurrentAnimatorStateInfo(0).IsName("Skill01") == false && animator.GetCurrentAnimatorStateInfo(0).IsName("Skill02") == false
+            && animator.GetCurrentAnimatorStateInfo(0).IsName("Ultimate") == false)
         {
-            Invoke("Move", 0f);
-        } */
+            wtf = true;
+        }
+        else
+        {
+            wtf = false;
+        }
     }
 }

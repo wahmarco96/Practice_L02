@@ -39,6 +39,7 @@ public class Enemy : MonoBehaviour {
     {
         StartCoroutine(ChasePlayer());
         NoticePlayerInRange();
+        IsDead();
     }
 
     protected IEnumerator ChasePlayer()
@@ -84,8 +85,9 @@ public class Enemy : MonoBehaviour {
 
     void IsDead()
     {
-        if (currentHealth < 1f)
+        if (maxHealth < 1f)
         {
+            //booom.Play();
             Destroy(this.gameObject);
             enemyDeathCount += 1;
             spawnCounting.CountingEnemyDeath(enemyDeathCount);
@@ -95,11 +97,17 @@ public class Enemy : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Sword")
+        if (other.gameObject.tag == "Sword")
         {
-            maxHealth -= 1f;
+            maxHealth -= player.damage;
+            //Destroy(gameObject);
+        }
+
+        else if (other.gameObject.tag == "Ultimate")
+        {
             Destroy(gameObject);
         }
+
     }
 
 }

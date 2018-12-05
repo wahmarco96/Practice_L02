@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1730,7 +1730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.30026868, y: 0.040537313}
   m_AnchorMax: {x: 0.70926875, y: 0.95400006}
-  m_AnchoredPosition: {x: 0, y: -3.9999847}
+  m_AnchoredPosition: {x: 0, y: -3.9999695}
   m_SizeDelta: {x: 0, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &817584413
@@ -3215,27 +3215,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4913694550196422, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -6.1006236
+      value: -0.23391636
       objectReference: {fileID: 0}
     - target: {fileID: 4913694550196422, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 159.56238
+      value: 169.12888
       objectReference: {fileID: 0}
     - target: {fileID: 4913694550196422, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 18.580647
+      value: 14.209784
       objectReference: {fileID: 0}
     - target: {fileID: 4629531549276666, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.13820308
+      value: 0.23391902
       objectReference: {fileID: 0}
     - target: {fileID: 4629531549276666, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 6.397627
+      value: -10.871115
       objectReference: {fileID: 0}
     - target: {fileID: 4629531549276666, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 16.660019
+      value: 16.645483
       objectReference: {fileID: 0}
     - target: {fileID: 4236277872533692, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3314,7 +3314,11 @@ Prefab:
     - target: {fileID: 65461236373746006, guid: ae70ce9b9027f1b4da304b10a8f9b6b8,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373008404090162, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
+      propertyPath: m_TagString
+      value: Ultimate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae70ce9b9027f1b4da304b10a8f9b6b8, type: 2}
@@ -5019,6 +5023,7 @@ MonoBehaviour:
   player: {fileID: 111490827}
   playerMove: {x: 0, y: 0, z: 0}
   smoothness: 1
+  wtf: 1
   playerdata: {fileID: 0}
   modelRoot: {fileID: 751187182}
 --- !u!1 &1858655603
